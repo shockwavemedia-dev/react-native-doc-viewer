@@ -1,4 +1,3 @@
-
 # react-native-doc-viewer [![npm version](https://img.shields.io/npm/v/react-native-doc-viewer.svg?style=flat)](https://www.npmjs.com/package/react-native-doc-viewer)![Platform](https://img.shields.io/badge/platform-react--native%20%5Bios%20%26%20android%5D-blue.svg)![License](https://img.shields.io/npm/l/express.svg)
 
 ![nodei.co](https://nodei.co/npm/react-native-doc-viewer.png?downloads=true&downloadRank=true&stars=true)
@@ -6,15 +5,15 @@
 A React Native bridge module: Document Viewer for files (pdf, png, jpg, xls, doc, ppt, xlsx, docx, pptx etc.)
 
 #### 2017 Roadmap
+
 - Download Progess Event Listener for big Files Android
+
 #### 2018 Roadmap
+
 - Android file without external Application
 - Windows Phone Support
 
 #### IMPORTANT INFORMATION: THIS IS A OPEN SOURCE PROJECT, SOMETIMES I HAVE NO TIME TO DEVELOP THIS PROJECT. THANK YOU FOR YOUR PULL REQUEST AND YOUR SUPPORT. I will continue to develop it as it is possible in time.
-
-
-
 
 Changelog:
 
@@ -32,7 +31,6 @@ Changelog:
 2.5.0  -  Update Project for React Native 0.50.3
 
 ```
-
 
 ## Getting started
 
@@ -56,7 +54,6 @@ If your project uses CocoaPods to manage React installation (especially with Exp
 
 ### Manual installation
 
-
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
@@ -68,8 +65,8 @@ If your project uses CocoaPods to manage React installation (especially with Exp
 
    ![Alt text](https://raw.githubusercontent.com/philipphecht/react-native-doc-viewer/master/Screenshots/screenshot_xcode_addlibrary2.png "Xcode add Library")
 
-5.  When you Show http Links don't forget to set APP Transport Security Settings ->
-    Allow Arbitrary Loads to YES
+5. When you Show http Links don't forget to set APP Transport Security Settings ->
+   Allow Arbitrary Loads to YES
 
 ![Alt text](https://raw.githubusercontent.com/philipphecht/react-native-doc-viewer/master/Screenshots/plist_file.png "Plist")
 
@@ -78,51 +75,55 @@ If your project uses CocoaPods to manage React installation (especially with Exp
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainApplication.java`
-  - Add `import com.philipphecht.RNDocViewerPackage;` to the imports at the top of the file
-  - Add `new RNDocViewerPackage()` to the list returned by the `getPackages()` method
+
+- Add `import com.shockwave.media.doc.viewer.RNDocViewerPackage;` to the imports at the top of the file
+- Add `new RNDocViewerPackage()` to the list returned by the `getPackages()` method
+
 2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-doc-viewer'
-  	project(':react-native-doc-viewer').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-doc-viewer/android')
-  	```
+   ```
+   include ':react-native-doc-viewer'
+   project(':react-native-doc-viewer').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-doc-viewer/android')
+   ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-doc-viewer')
-  	```
+   ```
+     compile project(':react-native-doc-viewer')
+   ```
 
 #### Windows on the Roadmap
+
 [Read it! :D](https://github.com/ReactWindows/react-native)
 
 1. In Visual Studio add the `RNReactNativeDocViewer.sln` in `node_modules/react-native-react-native-doc-viewer/windows/RNReactNativeDocViewer.sln` folder to their solution, reference from their app.
 2. Open up your `MainPage.cs` app
-  - Add `using com.Philipphecht.RNReactNativeDocViewer;` to the usings at the top of the file
-  - Add `new RNReactNativeDocViewerPackage()` to the `List<IReactPackage>` returned by the `Packages` method
 
+- Add `using com.shockwave.media.doc.viewer.RNReactNativeDocViewer;` to the usings at the top of the file
+- Add `new RNReactNativeDocViewerPackage()` to the `List<IReactPackage>` returned by the `Packages` method
 
 ## API DOC
+
 ### IOS Document Viewer Doc
 
-| resource                    | description                       |
-|:----------------------------|:----------------------------------|
-| `DoneButtonEvent`      | return true |
-| `RNDownloaderProgress`| return Progress Float|
+| resource               | description           |
+| :--------------------- | :-------------------- |
+| `DoneButtonEvent`      | return true           |
+| `RNDownloaderProgress` | return Progress Float |
 
-
-| resource                    | description                       |
-|:----------------------------|:----------------------------------|
-| `openDoc`      | {url:String,fileNameOptional:String (optional)} |
-| `openDocb64`| {url:String,fileName:String,fileType:String }|
-| `openDocBinaryinUrl` | {url:String,fileName:String,fileType:String } |
+| resource             | description                                     |
+| :------------------- | :---------------------------------------------- |
+| `openDoc`            | {url:String,fileNameOptional:String (optional)} |
+| `openDocb64`         | {url:String,fileName:String,fileType:String }   |
+| `openDocBinaryinUrl` | {url:String,fileName:String,fileType:String }   |
 
 ### Android Document Viewer Doc
 
-| resource                    | description                       |
-|:----------------------------|:----------------------------------|
-| `openDoc`      | {url:String,fileName:String, cache:boolean} |
-| `openDocb64`| {url:String,fileName:String,fileType:String, cache:boolean }|
-| `openDocBinaryinUrl` | not implemented yet |
+| resource             | description                                                  |
+| :------------------- | :----------------------------------------------------------- |
+| `openDoc`            | {url:String,fileName:String, cache:boolean}                  |
+| `openDocb64`         | {url:String,fileName:String,fileType:String, cache:boolean } |
+| `openDocBinaryinUrl` | not implemented yet                                          |
 
 ## Usage
+
 ```javascript
 import React, { Component } from 'react';
 import {
@@ -407,27 +408,19 @@ export default class DocumentViewerExample extends Component {
 }
 ```
 
-
 ## Screenshots
 
 ![Alt text](https://raw.githubusercontent.com/philipphecht/react-native-doc-viewer/master/Screenshots/Screenshot.png "Screenshot 1")
 
-
 ![Alt text](https://raw.githubusercontent.com/philipphecht/react-native-doc-viewer/master/Screenshots/Screenshot1.png "Screenshot 2")
-
 
 ![Alt text](https://raw.githubusercontent.com/philipphecht/react-native-doc-viewer/master/Screenshots/Screenshot2.png "Screenshot 3")
 
-
- Copyright (c) 2017-present, Philipp Hecht
- philipp.hecht@icloud.com
-
+Copyright (c) 2017-present, Philipp Hecht
+philipp.hecht@icloud.com
 
 ## Donation
+
 If this project help you reduce time to develop, you can give me a cup of coffee :)
 
 Etherum wallet: 0x124F99647a904240945d8B582eEf1E3CD6D00a8a
-
-
-
-
