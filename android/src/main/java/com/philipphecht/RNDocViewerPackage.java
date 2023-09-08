@@ -1,5 +1,5 @@
 
-package com.philipphecht;
+package com.shockwave.media.doc.viewer;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,7 +14,7 @@ import com.facebook.react.bridge.JavaScriptModule;
 public class RNDocViewerPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNDocViewerModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNReactNativeDocViewerModule(reactContext));
     }
 
     // Deprecated RN 0.47
